@@ -14,25 +14,36 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
       <a class="navbar-brand" href="#">Brandon Jaime Velázquez Martínez</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+        aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+
+          <!-- Dropdown Proyectos -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#proyectos" id="dropdownProyectos"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Proyectos
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownProyectos">
+              <li><a class="dropdown-item" href="#mas-informacion">Más información</a></li>
+              <li><a class="dropdown-item" href="#tecnologias">Tecnologías</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
-
-  <div class="alert alert-info d-none d-lg-block">
-  ¡Hola! Estás viendo mi portafolio desde una PC. Puedes interactuar con los elementos.
-  </div>
   
   <!-- Hero -->
   <section class="bg-dark text-white py-5 text-center mt-3">
@@ -105,6 +116,71 @@
     </div>
   </section>
 
+  <!-- Más información -->
+  <section id="mas-informacion" class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Más información</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <h5>Educación</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Ingeniería en Sistemas Computacionales (en curso)</li>
+            <li class="list-group-item">Bachillerato con especialidad en electrónica</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <h5>Habilidades</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Resolución de problemas</li>
+            <li class="list-group-item">Trabajo en equipo</li>
+            <li class="list-group-item">Aprendizaje rápido</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologías -->
+  <section id="tecnologias" class="bg-light py-5">
+    <div class="container">
+      <h2 class="mb-4">Tecnologías</h2>
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <div class="card shadow-sm py-3">
+            <div class="card-body">
+              <h5 class="card-title">Python</h5>
+              <span class="badge bg-warning text-dark">Backend</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card shadow-sm py-3">
+            <div class="card-body">
+              <h5 class="card-title">Java</h5>
+              <span class="badge bg-danger text-white">POO</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card shadow-sm py-3">
+            <div class="card-body">
+              <h5 class="card-title">HTML / CSS</h5>
+              <span class="badge bg-primary text-white">Frontend</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="card shadow-sm py-3">
+            <div class="card-body">
+              <h5 class="card-title">SQL / NoSQL</h5>
+              <span class="badge bg-success text-white">Bases de datos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="py-4">
     <div class="container-fluid">
@@ -127,4 +203,5 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
